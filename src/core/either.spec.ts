@@ -8,14 +8,14 @@ function doSomeThing(shouldSuccess: boolean): Either<string, number> {
   return right(10);
 }
 
-test('success result', () => {
+test('Sucesso como resultado', () => {
   const result = doSomeThing(true);
 
   expect(result.isRight()).toBeTruthy();
   expect(result.isLeft()).toBeFalsy();
 });
 
-test('error result', () => {
+test('Erro como resultado', () => {
   const result = doSomeThing(false);
 
   expect(result.isLeft()).toBeTruthy();
